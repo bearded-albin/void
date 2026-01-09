@@ -1,5 +1,5 @@
 [workspace]
-members = ["entropic_voidvoid", "entropy"]
+members = ["entropic_void", "entropy"]
 resolver = "3"
 
 [profile.release]
