@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+rand = "0.10.0-rc.6"
+rayon = "1.11.0"
+egui = "0.32.3"
+eframe = "0.32.3"
+plotters = "0.3.7"
+egui-plotter = "0.6.0"
