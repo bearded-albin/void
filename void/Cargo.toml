@@ -1,5 +1,5 @@
 [package]
-name = "void"
+name = "entropic_void"
 version = "0.1.0"
 edition = "2024"
 authors = ["Albin Sjögren <albin@sjoegren.se> <albin@malmo.skaggbyran.se>"]
