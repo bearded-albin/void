@@ -2,6 +2,11 @@
 name = "entropy"
 version = "0.1.0"
 edition = "2024"
+authors = ["Albin Sjögren <albin@sjoegren.se> <albin@malmo.skaggbyran.se>"]
+description = "Basic VOID implementation, it's crap fyi"
+readme = "README.md"
+repository = "https://github.com/bearded-albin/void.git"
+license-file = "LICENSE.txt"
 
 [dependencies]
 void = { path = "../void" }
