@@ -9,4 +9,4 @@ repository = "https://github.com/bearded-albin/void.git"
 license-file = "LICENSE"
 
 [dependencies]
-void = { path = "../void" }
+void = { path = "../entropic_void" }
