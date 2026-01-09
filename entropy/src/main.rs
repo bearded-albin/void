@@ -1,6 +1,6 @@
 #![forbid(unsafe_code)]
 
-use void::{
+use entropic_void::{
     generate_lattice,
     simulate_tick,
 };
