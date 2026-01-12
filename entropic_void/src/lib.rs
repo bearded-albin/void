@@ -1,7 +1,42 @@
 #![forbid(unsafe_code)]
+
+/*
+Purpose: Crate entry point and public API surface.
+
+Simulation (evolution.rs) is the orchestrator:
+    Uses:
+        lattice (grid)
+        redistribution (intra-cell evolution)
+        transport (inter-cell exchange)
+        energy (constraints, projection)
+        conservation (checks)
+        oscillation/visualization (optional analysis)
+    init sets up:
+        Lattice + CellState + ConstraintSet + RedistributionMatrix + coupling matrix.
+    redistribution + transport are the physics core:
+        Operate at cell/local and neighbor/global levels.
+    oscillation, visualization, conservation are analysis/diagnostics layers:
+        They never mutate physics rules; they observe.
+*/
+
+pub mod types;
+pub mod lattice;
+pub mod energy;
+pub mod redistribution;
+pub mod transport;
+pub mod oscillation;
+pub mod init;
+pub mod evolution;
+pub mod visualization;
+pub mod conservation;
+pub mod utils;
+
 use rayon::prelude::*;
-use rand::{Rng, SeedableRng};
-use rand::rngs::SmallRng;
+use rand::{
+    Rng,
+    SeedableRng,
+    rngs::SmallRng
+};
 
 //
 // =======================
