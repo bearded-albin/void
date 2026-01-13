@@ -132,15 +132,18 @@ impl Lattice {
 
     /*
     TODO
-    */
+    *//*
     pub fn iter_cells(&self) -> impl Iterator<Item = (LatticeCoord, &CellState)> {
         todo!();
     }
+    */
 
     /*
     TODO
-    */
+    *//*
     pub fn iter_cells_mut(&mut self) -> impl Iterator<Item = (LatticeCoord, &mut CellState)> {
         todo!();
     }
+    */
+
 }
