@@ -2,11 +2,31 @@
 name = "entropy"
 version = "0.1.0"
 edition = "2024"
-authors = ["Albin Sjögren <albin@sjoegren.se> <albin@malmo.skaggbyran.se>"]
-description = "Basic VOID implementation, it's crap fyi"
+authors = ["Albin Sjögren <albin@sjoegren.se>"]
+description = "Terminal UI dashboard for VOID energy lattice simulations"
 readme = "README.md"
-repository = "https://github.com/bearded-albin/void.git"
-license-file = "LICENSE"
+repository = "https://github.com/resonant-jovian/void.git"
+license = "GPL-3.0"
+
+[[bin]]
+name = "entropy"
+path = "src/main.rs"
 
 [dependencies]
+# Core simulation library
 entropic_void = { path = "../entropic_void" }
+
+# Terminal UI framework
+ratatui = { version = "0.30", features = ["crossterm"] }
+crossterm = "0.28"
+
+# Error handling
+color-eyre = "0.6"
+anyhow = "1.0"
+
+# Time and async (for event loop)
+tokio = { version = "1", features = ["time", "sync"] }
+
+# Serialization for config
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
