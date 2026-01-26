@@ -53,6 +53,4 @@ default = []
 lapack = ["nalgebra-lapack"]  # Enable LAPACK backend for faster eigenvalues
 simd = []  # Future SIMD optimizations
 
-[[bench]]
-name = "evolution_benchmark"
-harness = false
+
