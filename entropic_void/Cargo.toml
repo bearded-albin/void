@@ -46,7 +46,10 @@ approx = "0.5"  # For floating-point comparisons in tests
 criterion = "0.5"  # Benchmarking
 
 [features]
-default = ["lapack"]
+# Keep LAPACK/BLAS integration opt-in so the crate builds cleanly
+# even on systems without native linear algebra libraries.
+# Enable with: `--features lapack` if you have BLAS/LAPACK installed.
+default = []
 lapack = ["nalgebra-lapack"]  # Enable LAPACK backend for faster eigenvalues
 simd = []  # Future SIMD optimizations
 
